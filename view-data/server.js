@@ -15,8 +15,16 @@ client
   .then(() => {
     const db = client.db("cs-120-places");
     places = db.collection("places");
+    console.log("MongoDB connected successfully.");
+
+    app.listen(port, () => {
+      console.log(`Server is running on http://localhost:${port}`);
+    });
   })
-  .catch((err) => console.error("MongoDB connection error:", err));
+  .catch((err) => {
+    console.error("MongoDB connection error:", err);
+    process.exit(1);
+  });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
@@ -69,8 +77,4 @@ app.post("/api/process", async (req, res) => {
       .status(500)
       .json({ error: "An error occurred while processing your request." });
   }
-});
-
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
 });
