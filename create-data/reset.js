@@ -1,5 +1,4 @@
 require("dotenv").config();
-// console.log(process.env);
 const { MongoClient } = require("mongodb");
 
 const reset = async () => {

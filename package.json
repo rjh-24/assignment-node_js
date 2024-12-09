@@ -5,8 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd view-data && npm run server",
-    "reset": "cd create-db && npm run reset",
-    "seed": "cd create-db && npm run seed",
+    "reset": "cd create-data && npm run reset",
+    "seed": "cd create-data && npm run seed",
     "server": "cd view-data && npm run server",
     "install": "cd view-data && npm install",
     "heroku-postbuild": "cd view-data && npm install"
