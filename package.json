@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node view-data/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "reset": "cd create-db && npm run reset",
     "seed": "cd create-db && npm run seed",
-    "server": "cd view-data && npm run server"
+    "server": "cd view-data && npm run server",
+    "install": "cd view-data && npm install"
   },
   "keywords": [],
   "author": "",
